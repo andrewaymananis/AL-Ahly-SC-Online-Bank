@@ -1,0 +1,503 @@
+<html>
+
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Flex&family=Roboto+Serif&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style2.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+
+
+
+
+    <header>
+        <div class="navBar">
+            <div class="navImg">
+                <img src="imgs/alAhly.png" alt="Al Ahly BankLogo">
+            </div>
+            <nav>
+                <div class="navList">
+                    <ul>
+                        <li><a href="ClientHomePage.html" class="roboto">Home</a></li>
+                        <li><a href="annAndNoti.html" class="roboto">Announcments</a></li>
+                        <li><a href="annAndNoti.html" class="roboto">Notifications</a></li>
+                        <li><a href="manageProfile.html" class="roboto">Manage Profile</a></li>
+                        <li><a href="LandingPage.html" class="roboto">Logout</a></li>
+                    </ul>
+                </div>
+                <div class="clr"></div>
+            </nav>
+        </div>
+    </header>
+    
+    <div class="userProfile">
+        <div class="userImage">
+          <img src="imgs/user.png" alt="User Image">
+        </div>
+        <div class="userInfo">
+          <h2>ahmed17</h2>
+          <p>Platinum Account</p>
+        </div>
+    </div>
+      
+
+    <div class="container center3"  style="margin-top: 20px;">
+
+        <div style="  display: flex;
+        flex-wrap: wrap;
+        width: 60%;
+        margin-left: 8%;
+        justify-content: flex-start;
+        ">
+        
+            <Div class="accountPicker width30" style=" flex: 1; margin:10px ; padding: 10px; margin-right: 0%;">
+                <div class="skew Effect">
+                </div>
+                <div class="accInner" data-dropdown>
+                    <button class="link" data-dropdown-button>Choose A Card</button>
+                    <div class="DropMenu">
+                        <div class="accType Effect1">
+                            <a href="">
+                                <p>0122222222222222</p>
+                            </a>
+
+                        </div>
+                        <div class="accType Effect1">
+                            <a href="">
+                                <p>013333333333333</p>
+                            </a>
+
+                        </div>
+                        <div class="accType Effect1">
+                            <a href="">
+                                <p>014444444444444</p>
+                            </a>
+                        </div>
+
+                        <hr>
+
+                        <div class="accType Effect1">
+                            <a href="./GetCard.html">
+                                <p>Get Card</p>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="dropDown">
+                    </div>
+
+
+                </div>
+            </Div>
+
+
+        </div>
+
+        <div class="AccountDetailsPlus">
+            <div class="img " >
+                <img src="imgs/credit_card_PNG204.png" alt="Graph of account details">
+            </div>
+            <div class="allInfo">
+                <div class="infoPartition">
+                    <h4>Card Number:</h4>
+                    <p>0122222222222</p>
+                </div>
+                <div class="infoPartition">
+                    <h4>Card Type:</h4>
+                    <p>Premium Card</p>
+                </div>
+                <div class="infoPartition">
+                    <h4>Card Holder:</h4>
+                    <p>David Samer Yacoub</p>
+                </div>
+                <div class="infoPartition">
+                    <h4>CVV:</h4>
+                    <p>222</p>
+                </div>
+                <div class="infoPartition">
+                    <h4>Maximum Credit:</h4>
+                    <p>100000</p>
+                </div>
+                <div class="infoPartition">
+                    <h4>Current Usage: </h4>
+                    <p>50000</p>
+                </div>
+
+                <div class="infoPartition">
+                    <h4>Payment Due:</h4>
+                    <p>01/02/2134</p>
+                    <input type="checkbox" id="reminderButton">
+                    <label for="reminderButton" class="reminder" >Set Reminder<img src="imgs/bell.png" alt="bell"> </label> 
+
+                </div>
+
+                <div class="infoPartition">
+                    <h4>Points Collected</h4>
+                    <p id="totPoints">1,233</p>
+                    <button  onclick="redeemer(this)"  class="redeemPts"  id="redeeem">  Redeem Points </button>
+                </div>
+
+
+                <div class="clr"></div>
+            </div>
+            <div class="clr"></div>
+
+
+        </div>
+
+        
+        <div class="toggle-container">
+            <input type="checkbox" id="toggleButton">
+            <label for="toggleButton" class="toggle-label" >Manage</label>
+          
+            <div class="button-container">
+              <button  id="reportBtn" class="manageables lightUp">Report Issue</button>
+              <button onclick="cancelReq()" id="button2" class="manageables lightUp">Cancel Card</button>
+
+            </div>
+
+            <button id="paymentBtn" class="redeemPts" style="height: 50px; width: 32%;">Credit Card Payment</button>
+
+            <!-- class="manageables" -->
+        </div>
+          
+
+
+        <!-- <button id="reportBtn">Report Issue</button> -->
+
+        <!-- <div id="reportModal" class="modal" >
+            <div class="modal-content">
+              <span class="close">&times;</span>
+              <h2>Report Issue</h2>
+              <form id="reportForm">
+                <label for="issueType">Issue Type:</label>
+                <select id="issueType" name="issueType" required style="margin: 10px;"> 
+                  <option value="">Select Issue Type</option>
+                  <option value="theft">Theft</option>
+                  <option value="replacement">Replacement</option>
+                  <option value="loss">Loss</option>
+                </select>
+                <br>
+                <div id="replacementDetails" style="display: none;">
+                  <label for="deliveryAddress">Delivery Address:</label>
+                  <textarea required id="deliveryAddress" name="deliveryAddress"></textarea>
+                  <br>
+                </div>
+                <button type="submit">Submit</button>
+              </form>
+            </div>
+          </div> -->
+
+          
+        <div id="paymentModal" class="modal">
+            <div class="modal-content">
+              <span class="close">&times;</span>
+              <h2>Credit Card Payment</h2>
+              <form id="paymentForm">
+                <label for="dueDate">Due Date: 01/02/2134</label>
+                <br>
+                <label for="totalDebt">Total Debt: 50000</label>
+                <br>
+                <label for="paymentType">Payment Type:</label>
+                <select id="paymentType" name="paymentType" required>
+                  <option value="">Select Payment Type</option>
+                  <option value="full">Pay Full Amount</option>
+                  <option value="partial">Pay Partial Amount</option>
+                </select>
+                <br>
+                <div id="partialPaymentAmount" style="display: none;">
+                  <label for="partialAmount">Partial Amount:</label>
+                  <input type="number" id="partialAmount" name="partialAmount" min="0" step="0.01" required>
+                  <br>
+                </div>
+                <button type="submit">Pay</button>
+              </form>
+            </div>
+          </div>
+          
+
+
+        <!-- <button id="reportBtn">Report Issue</button> -->
+
+        <div id="reportModal" class="modal" >
+            <div class="modal-content">
+              <span class="close1">&times;</span>
+              <h2>Report Issue</h2>
+              <form id="reportForm">
+                <label for="issueType">Issue Type:</label>
+                <select id="issueType" name="issueType" required style="margin: 10px;"> 
+                  <option value="">Select Issue Type</option>
+                  <option value="theft">Theft</option>
+                  <option value="replacement">Replacement</option>
+                  <option value="loss">Loss</option>
+                </select>
+                <br>
+                <div id="replacementDetails" style="display: none;">
+                  <label for="deliveryAddress">Delivery Address:</label>
+                  <textarea required id="deliveryAddress" name="deliveryAddress"></textarea>
+                  <br>
+                </div>
+                <button type="submit">Submit</button>
+              </form>
+            </div>
+          </div>
+    </div>   
+    <footer>
+        <div class="final">
+            <div class="finalTop">
+                <div class="center">
+                    <div class="row">
+                        <h4>About us</h4>
+                        <p>I am text block. Click edit button to change this text. Lorem ipsum dolor sit amet,
+                            consectetur.
+                            I am text block. Click edit button to change this text. Lorem ipsum dolor sit amet,
+                            consectetur.
+                            <br><br>
+                            We are the champions! We are the most amazing theme of all time, yeah.
+                        </p>
+                    </div>
+
+                    <div class="row">
+                        <h4>Opening Hours</h4>
+                        <ul class="iconlist">
+                            <li class="icons2">
+                                <p>Monday 10AM - 9PM</p>
+                            </li>
+                            <li class="icons2">
+                                <p>Tuesday 10AM - 9PM</p>
+                            </li>
+                            <li class="icons2">
+                                <p>Wednesday 10AM - 9PM</p>
+                            </li>
+                            <li class="icons2">
+                                <p>Thursday 10AM - 10PM</p>
+                            </li>
+                            <li class="icons2">
+                                <p>Friday 10AM - 10PM</p>
+                            </li>
+                            <li class="icons2 lastEl">
+                                <p>Weekends 10AM - 11PM</p>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="row backimage">
+                        <h4>Contact Details
+                        </h4>
+                        <ul class="iconlist">
+                          <li class="icons3"><img src="imgs/icon.png" alt="location icon" ;>
+                            <p>Manchester Road 123-78B</p>
+                        </li>
+                        <li class="icons3"><img src="imgs/phone.png" alt="phone icon">
+                            <p>+46 123 456 789</p>
+                        </li>
+                        <li class="icons3"><img src="imgs/email.png" alt="email icon">
+                            <p>hello@sitename.com</p>
+                        </li>
+                        <li class="icons3 lastEl"><img src="imgs/earth.png" alt="earth icon">
+                            <p>http://www.sitename.com</p>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="row">
+                        <h4>Facing an issue?</h4>
+                        <ul class="iconlist">
+                          <li class="icons2"><img src="imgs/arrow.png" alt="arrow icon">
+                            <a href="">
+                                Report a problem
+                            </a>
+                        </li>
+                        <li class="icons2"><img src="imgs/arrow.png" alt="arrow icon">
+                            <a href="">
+                                Chat with a representive
+                            </a>
+                        </li>
+                        <li class="icons2"><img src="imgs/arrow.png" alt="arrow icon">
+                            <a href="">
+                                Message us on Social media
+                            </a>
+                        </li>
+                        <li class="icons2 lastEl"><img src="imgs/arrow.png" alt="arrow icon">
+                            <a href="">
+                                Contact us
+
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="clear"></div>
+
+                </div>
+
+            </div>
+            <div class="FinalBottom">
+                <div class="center2">
+                    <div><img src="imgs/alAhly.png" alt="image of logo of website">
+                    </div>
+                    <div>
+                        <p>Copyright. All rights reserved.
+                        </p>
+                    </div>
+                    <div class="exter_logos">
+                      <a href=""><img src="imgs/icon-facebook.svg" alt="facebook logo"></a>
+                      <a href=""><img src="imgs/google.png" alt="Google logo"></a>
+                      <a href=""><img src="imgs/linkedin.png" alt="Linked-in Logo"></a>
+                      <a href=""><img src="imgs/twitter.png" alt="Twitter logo"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>  
+
+
+          
+
+<!-- 
+        <div class="cardManager">
+            <input type="checkbox" id="toggleButton">
+            <label for="toggleButton" class="toggle-label">Toggle</label>
+            
+            <div class="button-container">
+              <button id="button1">Button 1</button>
+              <button id="button2">Button 2</button>
+            </div>
+         </div> -->
+
+
+
+
+<!-- 
+        <Div class="accountPicker skewPlus     " style="flex: 1;  margin:20px ;  margin-left: 0px; justify-content: flex-end; width: 100%;">
+
+            <button   class="Effect  roboto" style="width:100% ; height: 100%; ">Manage Cards</button>
+        </Div>
+ -->
+
+
+
+
+
+        
+
+
+
+
+   
+
+
+    <script>
+      function redeemer(button) {
+        var pts = document.getElementById("totPoints");
+        pts.textContent= "0"
+        button.disabled = true;
+      }
+
+      function reportLoss() {
+      alert("The loss report has been sent successfully. The card have been temporarily disabled");
+    }
+
+    function cancelReq() {
+      alert("Cancel request have been sent successfully. The card have been temporarily disabled");
+    }
+
+    document.addEventListener("DOMContentLoaded", function() {
+  var reportBtn = document.getElementById("reportBtn");
+  var reportModal = document.getElementById("reportModal");
+  var closeBtn = document.getElementsByClassName("close")[0];
+  var reportForm = document.getElementById("reportForm");
+
+  // Show modal when report button is clicked
+  reportBtn.addEventListener("click", function() {
+    reportModal.style.display = "block";
+  });
+
+  // Close the modal when close button is clicked
+  closeBtn.addEventListener("click", function() {
+    reportModal.style.display = "none";
+  });
+
+  // Close the modal when user clicks outside of it
+  window.addEventListener("click", function(event) {
+    if (event.target == reportModal) {
+      reportModal.style.display = "none";
+    }
+  });
+
+  // Handle form submission
+  reportForm.addEventListener("submit", function(event) {
+    event.preventDefault();
+    // Add your code to handle form submission here
+    // You can use AJAX or submit the form data to a server
+    // using the fetch API or any other method of your choice
+    // Once the form is submitted, you can close the modal
+    reportModal.style.display = "none";
+  });
+});
+
+document.addEventListener("DOMContentLoaded", function() {
+  var issueTypeSelect = document.getElementById("issueType");
+  var replacementDetailsDiv = document.getElementById("replacementDetails");
+
+  issueTypeSelect.addEventListener("change", function() {
+    if (issueTypeSelect.value === "replacement") {
+      replacementDetailsDiv.style.display = "block";
+    } else {
+      replacementDetailsDiv.style.display = "none";
+    }
+  });
+});
+
+
+
+document.addEventListener("DOMContentLoaded", function() {
+  var paymentBtn = document.getElementById("paymentBtn");
+  var paymentModal = document.getElementById("paymentModal");
+  var closeBtns = document.getElementsByClassName("close");
+  var paymentForm = document.getElementById("paymentForm");
+
+  // Show modal when payment button is clicked
+  paymentBtn.addEventListener("click", function() {
+    paymentModal.style.display = "block";
+  });
+
+  // Close the modal when close button is clicked
+  for (var i = 0; i < closeBtns.length; i++) {
+    closeBtns[i].addEventListener("click", function() {
+      paymentModal.style.display = "none";
+    });
+  }
+
+  // Close the modal when user clicks outside of it
+  window.addEventListener("click", function(event) {
+    if (event.target == paymentModal) {
+      paymentModal.style.display = "none";
+    }
+  });
+
+  // Handle payment form submission
+  paymentForm.addEventListener("submit", function(event) {
+    event.preventDefault();
+    var paymentAmount = parseFloat(document.getElementById("paymentAmount").value);
+
+    paymentModal.style.display = "none";
+  });
+});
+
+document.addEventListener("DOMContentLoaded", function() {
+  var paymentTypeSelect = document.getElementById("paymentType");
+  var partialPaymentAmountDiv = document.getElementById("partialPaymentAmount");
+
+  paymentTypeSelect.addEventListener("change", function() {
+    if (paymentTypeSelect.value === "partial") {
+      partialPaymentAmountDiv.style.display = "block";
+    } else {
+      partialPaymentAmountDiv.style.display = "none";
+    }
+  });
+});
+
+    </script>
+    
+</body>
+</html>
